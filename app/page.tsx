@@ -1,8 +1,12 @@
+import Contact from "@/components/contact";
+import Experience from "@/components/exprerience";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="background-grid background-grid--fade-out pt-36 pb-20 lg:pb-28 lg:pt-52">
+    <section className="relative pt-36 pb-20 lg:pb-28 lg:pt-52">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
+      <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]" />
       <main className="min-h-screen pl-6 pr-6 max-w-6xl mx-auto">
         <div className="relative">
           <div className="relative z-10">
@@ -169,7 +173,7 @@ export default function Home() {
                   <div className="absolute z-[10]"></div>
                   <div className="">
                     <img
-                      alt="Enji Kusnadi Illustration"
+                      alt="LinxDev Illustration"
                       src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac03a17e-589d-4ac1-952a-4185d1070994/dfjviyr-6839a997-443b-4819-b969-c068276c000c.png/v1/fit/w_828,h_1304/gotou_hitori__bocchi__render_by_minhchauk1k_dfjviyr-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAxNiIsInBhdGgiOiJcL2ZcL2FjMDNhMTdlLTU4OWQtNGFjMS05NTJhLTQxODVkMTA3MDk5NFwvZGZqdml5ci02ODM5YTk5Ny00NDNiLTQ4MTktYjk2OS1jMDY4Mjc2YzAwMGMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.BRkK0DITC2KHS5q_d9bMjbsKS9TktxgnpMrwH6Dsucg"
                       width="457"
                       height="526"
@@ -183,6 +187,36 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="-mt-12 mb-12 md:mt-0 md:mb-24">
+          <div className="flex items-center justify-center py-8">
+            <blockquote className="flex gap-2 pt-2 text-3xl text-slate-500 md:text-4xl lg:pt-0 lg:text-5xl dark:text-slate-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                role="img"
+                fill="currentColor"
+                className="-mt-1 h-10 text-slate-300 md:-mt-3 md:h-16 lg:h-24 dark:text-slate-800"
+              >
+                <path d="M7.27273 16.3833H0L5.30713 4H10.0737L7.27273 16.3833ZM17.199 16.3833H9.92629L15.2334 4H20L17.199 16.3833Z"></path>
+              </svg>
+              <span className="flex flex-col">
+                <span className="leading-[1.15]">
+                  <em>It&apos;s not a bug,</em>{" "}
+                </span>
+                <span className="flex items-center gap-2 leading-[1.15] lg:gap-4">
+                  <span className="mt-1 h-0.5 w-8 rounded-full bg-slate-400 lg:h-1 lg:w-24 dark:bg-slate-600"></span>
+                  <span>
+                    <strong className="font-extrabold text-slate-600 dark:text-slate-300">
+                      its a feature
+                    </strong>{" "}
+                  </span>
+                </span>
+              </span>
+            </blockquote>
+          </div>
+        </div>
+        <Experience />
+        <Contact />
       </main>
     </section>
   );
