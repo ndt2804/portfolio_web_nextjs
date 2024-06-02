@@ -1,3 +1,4 @@
+import About from "@/components/about";
 import Contact from "@/components/contact";
 import Experience from "@/components/exprerience";
 import Image from "next/image";
@@ -46,12 +47,14 @@ export default function Home() {
           </div>
           <div className="mt-6 md:mt-8">
             <div className="flex gap-2">
-              <div className="relative z-20">
-                <a
-                  className="button button--solid min-w-[128px] md:button--big"
-                  href="/work/contact"
-                >
-                  Get in Touch
+              <div
+                className="relative z-20"
+                style={{ opacity: 1, transform: "none" }}
+              >
+                <a className="min-w-[128px]" href="/">
+                  <button className="hover:shadow-lg text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg ">
+                    Get in Touch
+                  </button>
                 </a>
               </div>
             </div>
@@ -187,7 +190,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="-mt-12 mb-12 md:mt-0 md:mb-24">
+        <div className="-mt-12 mb-12 md:mt-12 md:mb-24 ">
           <div className="flex items-center justify-center py-8">
             <blockquote className="flex gap-2 pt-2 text-3xl text-slate-500 md:text-4xl lg:pt-0 lg:text-5xl dark:text-slate-400">
               <svg
@@ -201,21 +204,27 @@ export default function Home() {
               </svg>
               <span className="flex flex-col">
                 <span className="leading-[1.15]">
-                  <em>It&apos;s not a bug,</em>{" "}
+                  <em>It&apos;s not a bug</em>{" "}
                 </span>
                 <span className="flex items-center gap-2 leading-[1.15] lg:gap-4">
                   <span className="mt-1 h-0.5 w-8 rounded-full bg-slate-400 lg:h-1 lg:w-24 dark:bg-slate-600"></span>
                   <span>
                     <strong className="font-extrabold text-slate-600 dark:text-slate-300">
-                      its a feature
+                      it&apos;s a
                     </strong>{" "}
                   </span>
+                  <strong className="relative font-extrabold text-slate-600 dark:text-slate-300">
+                    <span className="absolute -left-0.5 right-0 top-1 bottom-0 z-[-1] rounded-md bg-slate-100 px-1 lg:-left-1.5 lg:-right-0.5 lg:top-2 lg:bottom-0 dark:bg-slate-800"></span>
+                    feature.
+                  </strong>
                 </span>
               </span>
             </blockquote>
           </div>
         </div>
+        <About />
         <Experience />
+
         <Contact />
       </main>
     </section>
