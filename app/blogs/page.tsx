@@ -1,15 +1,14 @@
-"use client";
-import { getBlogPosts } from "@/libs/notion";
+import { getPosts } from "@/libs/ghost";
 interface Post {
-  slug: string;
   id: string;
   title: string;
-  tags: string[];
+  slug: string;
   author: string;
+  Tag: string[];
 }
 export default async function Home() {
-  const posts: Post[] = await getBlogPosts();
-  if (!posts) return <p>No profile data</p>;
+  const post: Post[] = await getPosts();
+  console.log(post);
   return (
     <section className="relative pt-36 pb-20 lg:pb-28 lg:pt-52">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -27,13 +26,13 @@ export default async function Home() {
           </div>
         </header>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-          {posts.map((post) => (
+          {post.map((post) => (
             <article
               className="overflow-hidden rounded-lg shadow transition hover:shadow-lg"
               key={post.id}
             >
               {" "}
-              <a href={`/blog/${post.slug}`}>
+              <a href={`/blogs/${post.slug}`}>
                 <img
                   alt=""
                   src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
@@ -55,14 +54,14 @@ export default async function Home() {
                     {post.author}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-1">
-                    {post.tags.map((tag: any) => (
+                    {/* {post.tags.map((tag: any) => (
                       <span
                         className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
                         key={tag}
                       >
                         {tag}{" "}
                       </span>
-                    ))}
+                    ))} */}
                   </div>
                 </div>
               </a>

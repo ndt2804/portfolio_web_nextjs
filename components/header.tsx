@@ -29,7 +29,7 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="/blog">
+                <a className="nav-link" href="/blogs">
                   Blog
                 </a>
               </li>
