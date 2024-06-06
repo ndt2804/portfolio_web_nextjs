@@ -4,6 +4,7 @@ interface Post {
   title: string;
   slug: string;
   author: string;
+  feature_image: string;
   Tag: string[];
 }
 export default async function Home() {
@@ -35,7 +36,7 @@ export default async function Home() {
               <a href={`/blogs/${post.slug}`}>
                 <img
                   alt=""
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  src={post.feature_image}
                   className="h-56 w-full object-cover"
                 />
 

@@ -31,7 +31,7 @@ const About = () => {
               <button
                 onClick={() => handleSelect("Tab1")}
                 type="button"
-                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400 border-divider-light  dark:border-divider-dark"
+                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400 hover:text-violet-400 hover:border-violet-400 border-divider-light  dark:border-divider-dark"
               >
                 <span className="hidden w-24 shrink-0 justify-center text-center text-7xl font-black xl:flex dark:text-slate-600">
                   1
@@ -46,7 +46,7 @@ const About = () => {
               <button
                 onClick={() => handleSelect("Tab2")}
                 type="button"
-                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400  border-divider-light  dark:border-divider-dark"
+                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400 hover:text-violet-400 hover:border-violet-400   border-divider-light  dark:border-divider-dark"
               >
                 <span className="hidden w-24 shrink-0 justify-center text-center text-7xl font-black xl:flex  dark:text-slate-600">
                   2
@@ -56,14 +56,14 @@ const About = () => {
                     Techology
                   </span>
                   <span className="mt-1 block text-sm text-slate-600 dark:text-slate-400">
-                    Positioning and adding spacing between elements.
+                    Someone tech i use in projects like
                   </span>
                 </span>
               </button>
               <button
                 onClick={() => handleSelect("Tab3")}
                 type="button"
-                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400  border-divider-light  dark:border-divider-dark"
+                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400 hover:text-violet-400 hover:border-violet-400  border-divider-light  dark:border-divider-dark"
               >
                 <span className="hidden w-24 shrink-0 justify-center text-center text-7xl font-black xl:flex  dark:text-slate-600">
                   3
@@ -73,14 +73,14 @@ const About = () => {
                     Lifestyle
                   </span>
                   <span className="mt-1 block text-sm text-slate-600 dark:text-slate-400">
-                    Choosing a color scheme with sufficient contrast.
+                    lifestyle for developers
                   </span>
                 </span>
               </button>
               <button
                 onClick={() => handleSelect("Tab4")}
                 type="button"
-                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400  border-divider-light  dark:border-divider-dark"
+                className="flex flex-1 items-center gap-4 rounded-2xl border-2 bg-white px-4 py-4 text-left dark:bg-slate-900 focus-within:text-violet-600  focus:border-violet-400 hover:text-violet-400 hover:border-violet-400  border-divider-light  dark:border-divider-dark"
               >
                 <span className="hidden w-24 shrink-0 justify-center text-center text-7xl font-black xl:flex  dark:text-slate-400">
                   4
