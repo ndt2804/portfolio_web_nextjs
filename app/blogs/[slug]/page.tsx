@@ -105,7 +105,7 @@ const BlogPage = async ({ params }: PostProps) => {
             </div>
           </div>
         </div>
-        <div className="relative z-0 h-[40vh] mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
+        <div className="relative z-0 h-[40vh] mx-auto items-center aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
           {postPage.feature_image && (
             <img
               alt="Thumbnail"
@@ -116,22 +116,20 @@ const BlogPage = async ({ params }: PostProps) => {
           )}
         </div>
         <article className="mx-auto max-w-screen-md ">
-          <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {postPage ? (
-              <div>
-                {postPage.html && (
-                  <div
-                    className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600"
-                    dangerouslySetInnerHTML={{
-                      __html: DOMPurify.sanitize(postPage.html),
-                    }}
-                  />
-                )}
-              </div>
-            ) : (
-              <div>Loading...</div>
-            )}
-          </div>
+          {postPage ? (
+            <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
+              {postPage.html && (
+                <div
+                  className=" mb-3 mt-2  tracking-tight dark:text-white   text-zinc-600  text-lg leading-loose md:text-xl md:leading-loose"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(postPage.html),
+                  }}
+                ></div>
+              )}
+            </div>
+          ) : (
+            <div>Loading...</div>
+          )}
         </article>
 
         <section className="py-24 ">
