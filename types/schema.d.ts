@@ -1,18 +1,15 @@
-export type Tag = {
-  color: string;
-  id: string;
-  name: string;
-};
-
 export type BlogPost = {
   id: string;
-  cover: string;
-  name: string;
-  tags: Tag[];
-  description: string;
+  slug: string;
+  feature_image: string;
+  tags: string[];
+  title: string;
+  primary_author: string;
+  authors: string[];
+  created_at: string;
 };
-
-export type PostPage = {
-  post: BlogPost;
-  markdown: string;
+export type PostProps = {
+  params: {
+    slug: string;
+  };
 };

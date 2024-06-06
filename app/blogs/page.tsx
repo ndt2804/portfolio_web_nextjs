@@ -1,15 +1,25 @@
 import { getPosts } from "@/libs/ghost";
-interface Post {
-  id: string;
-  title: string;
-  slug: string;
-  author: string;
-  feature_image: string;
-  Tag: string[];
-}
+import { BlogPost } from "@/types/schema";
+
 export default async function Home() {
-  const post: Post[] = await getPosts();
-  console.log(post);
+  const post: BlogPost[] = await getPosts();
+  const formatGhostDate = (
+    dateString: string | undefined,
+    formatString: string
+  ): string => {
+    if (!dateString) {
+      return "";
+    }
+    const date = new Date(dateString);
+    const formattedDate = new Intl.DateTimeFormat("en-US", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    }).format(date);
+
+    return formattedDate;
+  };
+  if (!post) return <p>No profile data</p>;
   return (
     <section className="relative pt-36 pb-20 lg:pb-28 lg:pt-52">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -27,7 +37,7 @@ export default async function Home() {
           </div>
         </header>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-          {post.map((post) => (
+          {post.map((post): any => (
             <article
               className="overflow-hidden rounded-lg shadow transition hover:shadow-lg"
               key={post.id}
@@ -41,28 +51,28 @@ export default async function Home() {
                 />
 
                 <div className="bg-white p-4 sm:p-6">
-                  <time
-                    dateTime="2022-10-10"
-                    className="block text-xs text-gray-500"
-                  >
-                    {" "}
-                    10th Oct 2022{" "}
+                  <time className="block text-xs text-gray-500">
+                    {formatGhostDate(post.created_at, "DD MMMM YYYY")}
                   </time>
-
                   <h3 className="mt-0.5 text-lg text-gray-900">{post.title}</h3>
+                  {post.authors.map((author: any) => (
+                    <p
+                      className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500"
+                      key={author.id}
+                    >
+                      {author.name}
+                    </p>
+                  ))}
 
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                    {post.author}
-                  </p>
                   <div className="mt-4 flex flex-wrap gap-1">
-                    {/* {post.tags.map((tag: any) => (
+                    {post.tags.map((tag: any) => (
                       <span
                         className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
-                        key={tag}
+                        key={tag.id}
                       >
-                        {tag}{" "}
+                        {tag.name}
                       </span>
-                    ))} */}
+                    ))}
                   </div>
                 </div>
               </a>
