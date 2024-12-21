@@ -18,8 +18,9 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 }) => {
     return (
         <div className="p-5 bg-zinc-100 rounded-xl transition-all duration-300">
-            <h3 className="text-3xl font-semibold text-gray-800">{title}</h3>
-            <p className="mt-3 text-lg text-gray-600">{description}</p>
+
+            <h3 className="text-3xl font-black text-gray-600">{title}</h3>
+            <p className="mt-3 text-sm font-semibold  text-slate-700">{description}</p>
 
             <div className="flex items-center gap-3 mt-3 flex-wrap">
                 {tags.map((tag, index) => (
