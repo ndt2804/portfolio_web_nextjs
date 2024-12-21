@@ -30,7 +30,7 @@ export default function Home() {
                   dev,
                 </span>
                 <h1 className="block text-xl  text-slate-600 md:text-xl dark:text-slate-400 max-w-4xl word-wrap break-word leading-loose">
-                  <span className="lowercase leading-loose">I'm</span>{" "}
+                  <span className="lowercase leading-loose">I&apos;m</span>{" "}
                   <strong className="font-bold lowercase text-slate-700 dark:text-slate-300 leading-loose">
                     Nguyen Duy Tan
                   </strong>{" "}
@@ -67,7 +67,7 @@ export default function Home() {
 
             </div>
             <p className="text-gray-600 mt-4 font-black text-base ">
-              If you have any question, don't hesitate to email me at <a href="mailto:nduytan@gmail.com" className="transition-all duration-300 text-gray-800  hover:text-gray-800 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-500 after:transition-all after:duration-300 hover:after:bg-zinc-800 after:ease-in-out after:transform after:scale-x-100 after:origin-left">
+              If you have any question, don`&apos;`t hesitate to email me at <a href="mailto:nduytan@gmail.com" className="transition-all duration-300 text-gray-800  hover:text-gray-800 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-500 after:transition-all after:duration-300 hover:after:bg-zinc-800 after:ease-in-out after:transform after:scale-x-100 after:origin-left">
                 nduytan@gmail.com
               </a>
             </p>
