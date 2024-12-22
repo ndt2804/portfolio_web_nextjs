@@ -67,8 +67,8 @@ export default function Home() {
 
             </div>
             <p className="text-gray-600 mt-4 font-black text-base ">
-              If you have any question, don`&apos;`t hesitate to email me at <a href="mailto:nduytan@gmail.com" className="transition-all duration-300 text-gray-800  hover:text-gray-800 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-500 after:transition-all after:duration-300 hover:after:bg-zinc-800 after:ease-in-out after:transform after:scale-x-100 after:origin-left">
-                nduytan@gmail.com
+              If you have any question, don&apos;t hesitate to email me at <a href="mailto:nduytan.dev@gmail.com" className="transition-all duration-300 text-gray-800  hover:text-gray-800 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-500 after:transition-all after:duration-300 hover:after:bg-zinc-800 after:ease-in-out after:transform after:scale-x-100 after:origin-left">
+                nduytan.dev@gmail.com
               </a>
             </p>
           </div>
