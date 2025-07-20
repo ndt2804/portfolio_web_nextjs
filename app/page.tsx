@@ -25,23 +25,27 @@ export default function Home() {
                 <span className="mb-4 block text-[2.5rem] font-[1000] leading-none md:mb-6 md:text-7xl">
                   I&apos;m{" "}
                   <strong className="text-purple-600 dark:text-purple-500">
-                    linX
+                    _
                   </strong>
-                  dev,
+                  tannd,
                 </span>
                 <h1 className="block text-xl  text-slate-600 md:text-xl dark:text-slate-400 max-w-4xl word-wrap break-word leading-loose">
                   <span className="lowercase leading-loose">I&apos;m</span>{" "}
                   <strong className="font-bold lowercase text-slate-700 dark:text-slate-300 leading-loose">
                     Nguyen Duy Tan
                   </strong>{" "}
-                  , a passionate{" "}
+                  — a
+                  {" "}
                   <strong className="font-bold lowercase text-slate-700 dark:text-slate-300 leading-loose">
-                    Web Developer
+                    Fullstack Web Developer
                   </strong>{" "}
-                  <span className="block leading-loose">who specializes in creating intuitive, clean, and modern UI design.
+                  with a strong passion
+                  <span className="block leading-loose">for building scalable, efficient, and user-centric web applications.
                   </span>
-                  <span className="block leading-loose">With extensive experience in coding and software development,</span>
-                  <span className="block leading-loose">I focus on crafting elegant solutions and seamless user experiences.</span>
+                  <span className="lowercase block leading-loose">I specialize in both frontend and backend development, turning complex requirements into clean code and reliable systems.</span>
+                  <span className="lowercase block leading-loose">From responsive UI to robust APIs, I enjoy solving problems and crafting seamless digital experiences.
+                  </span>
+
                 </h1>
               </span>
 

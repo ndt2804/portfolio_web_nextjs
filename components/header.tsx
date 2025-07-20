@@ -13,9 +13,9 @@ const Header = () => {
                 <div className="-mt-1 hidden text-2xl sm:block">
                   <span className="text-slate-900 dark:text-slate-200">
                     <strong className="text-purple-600 dark:text-purple-500">
-                      linX
+                      _
                     </strong>
-                    dev
+                    tannd
                   </span>
                 </div>
               </div>

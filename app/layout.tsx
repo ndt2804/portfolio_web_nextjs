@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "linXdev | Nguyen Duy Tan",
+  title: "_tannd | Nguyen Duy Tan",
   description: "Portfolio web built by Nguyen Duy Tan",
 };
 
