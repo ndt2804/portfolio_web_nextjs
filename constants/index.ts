@@ -4,59 +4,75 @@ export const projectsData: Project[] = [
         title: "NextJS Portfolio Website",
         description: "Portfolio Website Build on Next Project",
         gitUrl: "https://github.com/ndt2804/portfolio_web_nextjs",
-        demoUrl: "https://www.tannd.me/",
-        tags: ["Next.js", "React", "Tailwindcss", "Typescript"],
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["NextJS", "React", "Tailwindcss", "TypeScript"],
     },
+
     {
         id: 2,
-        title: "Elearning Platform",
-        description:
-            "A website to watch anime, data taken from YouTube website",
-        gitUrl: "https://github.com/ndt2804/elearning-platform",
-        demoUrl: "https://elearning-platform-beige.vercel.app/",
-        tags: ["NextJS", "ReactJS", "Tailwindcss", "Elearning"],
+        title: "Readora - Book Review Platform",
+        description: "Track your reading, discover new books, and connect with fellow readers ",
+        gitUrl: "https://github.com/ndt2804/readora-ui",
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["NextJS", "React", "Tailwindcss", "JavaScript", "ExpressJS"],
     },
+
     {
         id: 3,
-        title: "Watch Anime Website",
-        description:
-            "An eLearning platform is an online learning platform helps consolidate interactive online services, information delivery, support tools, and enhances education delivery and management. A popular type of eLearning platform is a Learning Management System (LMS).",
-        gitUrl: "https://github.com/ndt2804/anime-nodejs-hbs",
-        demoUrl: "https://github.com/ndt2804/anime-nodejs-hbs",
-        tags: ["NodeJS", "ExpressJS", "Restful API", "MVC"],
+        title: "Ticket Booking System",
+        description: "Ticket booking system with features like seat selection, payment integration, and user authentication.",
+        gitUrl: "https://github.com/ndt2804/event-management-fe",
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["NextJS", "React", "Tailwindcss", "TypeScript", "NestJS"],
     },
     {
         id: 4,
-        title: "Wikipedia for Yuri Books",
-        description:
-            "A website to read information about yuri books, licenses, and calendar releases.",
-        gitUrl: "https://github.com/ndt2804/yuri-yuri",
-        demoUrl: "https://github.com/ndt2804/yuri-yuri",
-        tags: ["VueJS", "Nuxt 3", "Typescript"],
+        title: "Diggram Social Media",
+        description: "Portfolio Website Build on Next Project",
+        gitUrl: "https://github.com/ndt2804/diggram-social",
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["React", "Tailwindcss", "TypeScript", "Vite", "ExpressJS"],
     },
+
     {
         id: 5,
-        title: "Calendar Book Release",
-        description: "A Discord bot notification about the calendar book release",
-        gitUrl: "https://github.com/ndt2804/calendar-release",
-        demoUrl: "https://github.com/ndt2804/calendar-release",
-        tags: ["Bun", "DiscordJS", "Bot"],
+        title: "Elearning Platform",
+        description:
+            "Elearning platform with features like course management, user authentication, and a responsive design.",
+        gitUrl: "https://github.com/ndt2804/elearning-platform",
+        demoUrl: "https://elearning-platform-beige.vercel.app/",
+        tags: ["NextJS", "ReactJS", "Tailwindcss"],
     },
     {
         id: 6,
-        title: "Ecommerce Frontend",
-        description:
-            "A Frontend for ecommerce applications, helping customers and store owners have the most convenient means of buying and selling.",
-        gitUrl: "https://github.com/ndt2804/e-commerce-nuxt",
-        demoUrl: "https://github.com/ndt2804/e-commerce-nuxt",
-        tags: ["Vue", "Nuxt"],
+        title: "Watch Anime Website",
+        description: "Website to watch anime, data taken from YouTube website",
+        gitUrl: "https://github.com/ndt2804/anime-nodejs-hbs",
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["ExpressJS", "Tailwindcss"],
     },
+
+    {
+        id: 7,
+        title: "Calendar Book Release",
+        description: "A Discord bot notification about the calendar book release",
+        gitUrl: "https://github.com/ndt2804/calendar-release",
+        demoUrl: "https://tannd.is-a.dev/",
+        tags: ["BunJS", "TypeScript"],
+    },
+
 ];
 export type Project = {
     id: number;
     title: string;
     description: string;
     gitUrl: string;
-    demoUrl: string; // Make sure demoUrl is included
-    tags: string[];  // 'tags' is an array of strings
+    demoUrl: string;
+    tags: string[];
 };
+
+
+export const GITHUB = {
+    username: "ndt2804",
+    topic: "featured"
+}

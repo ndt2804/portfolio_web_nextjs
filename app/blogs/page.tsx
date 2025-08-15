@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CalendarDays, User } from "lucide-react"
 
-export const dynamic = "force-dynamic" // Bắt buộc fetch ở server mỗi lần (nếu Wisp không hỗ trợ SSG ổn định)
+export const dynamic = "force-dynamic"
 
 export default async function HomePage() {
   let posts: GetPostsResult["posts"] = []

@@ -1,0 +1,45 @@
+// src/data/tag-icons.ts
+import {
+    JavaScriptIcon,
+    TypeScriptIcon,
+    ReactIcon,
+    NextIcon,
+    VueIcon,
+    ExpressIcon,
+    NuxtIcon,
+    TailwindIcon,
+    VscodeIcon,
+    GithubIcon,
+    DockerIcon,
+    SupabaseIcon,
+    MongoDBIcon,
+    BunIcon,
+    NestIcon,
+    ViteIcon
+} from "@/components/icons";
+
+export const tagIcons: Record<string, React.FC> = {
+    JavaScript: JavaScriptIcon,
+    TypeScript: TypeScriptIcon,
+    React: ReactIcon,
+    ReactJS: ReactIcon,
+    "Next.js": NextIcon,
+    NextJS: NextIcon,
+    Vue: VueIcon,
+    VueJS: VueIcon,
+    Express: ExpressIcon,
+    ExpressJS: ExpressIcon,
+    Nuxt: NuxtIcon,
+    "Nuxt 3": NuxtIcon,
+    Tailwind: TailwindIcon,
+    Tailwindcss: TailwindIcon,
+    Vscode: VscodeIcon,
+    Github: GithubIcon,
+    Docker: DockerIcon,
+    Supabase: SupabaseIcon,
+    MongoDB: MongoDBIcon,
+    BunJS: BunIcon,
+    NestJS: NestIcon,
+    Vite: ViteIcon,
+
+};
