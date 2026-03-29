@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -89,4 +91,25 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.font-headline {
+  font-family: var(--font-space-grotesk), sans-serif !important;
+}
+.font-body {
+  font-family: var(--font-inter), sans-serif !important;
+}
+.font-label {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.kinetic-gradient {
+  background: linear-gradient(135deg, #ff8f73 0%, #dc3300 100%);
+}
+.glass-panel {
+  background: rgba(19, 19, 19, 0.6);
+  backdrop-filter: blur(20px);
 }

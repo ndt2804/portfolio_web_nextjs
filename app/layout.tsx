@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-const inter = Inter({ subsets: ["latin"] });
+import { PortfolioModeProvider } from "@/components/providers/portfolio-mode-provider";
+import LayoutWrapper from "@/components/layout-wrapper";
+
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-space-grotesk' });
 
 export const metadata: Metadata = {
   title: "_tannd | Nguyen Duy Tan",
@@ -17,11 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative min-h-screen`}>
-        <div className="absolute inset-0 -z-10 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1.5px)] [background-size:24px_24px]" />
-        <Header />
-        <main className="flex-grow pl-6 pr-6 max-w-7xl mx-auto">{children}</main>
-        <Footer />
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${inter.className} relative min-h-screen`}>
+        <PortfolioModeProvider>
+          <Header />
+          <LayoutWrapper>{children}</LayoutWrapper>
+          <Footer />
+        </PortfolioModeProvider>
       </body>
     </html>
   );

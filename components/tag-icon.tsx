@@ -18,7 +18,7 @@ import {
     ViteIcon
 } from "@/components/icons";
 
-export const tagIcons: Record<string, React.FC> = {
+const rawTagIcons: Record<string, React.FC> = {
     JavaScript: JavaScriptIcon,
     TypeScript: TypeScriptIcon,
     React: ReactIcon,
@@ -41,5 +41,22 @@ export const tagIcons: Record<string, React.FC> = {
     BunJS: BunIcon,
     NestJS: NestIcon,
     Vite: ViteIcon,
+};
 
+// Create a lowercased map for case-insensitive matching
+export const tagIcons: Record<string, React.FC> = Object.keys(rawTagIcons).reduce(
+    (acc, key) => {
+        // Also remove spaces and hyphens for better matching
+        const normalizedKey = key.toLowerCase().replace(/[\s-.]/g, '');
+        acc[normalizedKey] = rawTagIcons[key];
+        // Keep the original key just in case
+        acc[key] = rawTagIcons[key];
+        return acc;
+    },
+    {} as Record<string, React.FC>
+);
+
+export const getIconForTag = (tag: string): React.FC | undefined => {
+    const normalizedTag = tag.toLowerCase().replace(/[\s-.]/g, '');
+    return tagIcons[normalizedTag];
 };
