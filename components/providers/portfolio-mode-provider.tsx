@@ -18,7 +18,7 @@ export function PortfolioModeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [mode, setMode] = useState<PortfolioMode>("developer");
+  const [mode, setMode] = useState<PortfolioMode>("editor");
 
   useEffect(() => {
     const savedMode = localStorage.getItem("portfolioMode") as PortfolioMode;

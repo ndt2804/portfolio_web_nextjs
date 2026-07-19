@@ -25,6 +25,10 @@ const Header = () => {
   const isDeveloper = mode === "developer";
   const [currentQuote, setCurrentQuote] = useState("");
   const [showQuote, setShowQuote] = useState(false);
+  
+  if (!isDeveloper) {
+    return null;
+  }
 
   const handleQuoteClick = () => {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
